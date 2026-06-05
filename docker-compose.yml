@@ -1,0 +1,9 @@
+services:
+  space-astro-bot:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./space_astro_bot.sqlite3:/app/space_astro_bot.sqlite3
+      - ./data:/app/data
+    restart: unless-stopped
